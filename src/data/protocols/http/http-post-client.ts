@@ -1,3 +1,5 @@
+import { HttpResponse } from "./http-response"
+
 export type HttpPostParams = {
     url: string
     body?: object
@@ -5,5 +7,5 @@ export type HttpPostParams = {
 }
 
 export interface HttpPostClient {
-    postUrl(params: HttpPostParams): Promise<void>
+    postUrl(params: HttpPostParams): Promise<HttpResponse>
 }
